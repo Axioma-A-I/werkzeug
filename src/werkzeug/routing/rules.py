@@ -524,7 +524,7 @@ class Rule(RuleFactory):
         """
         return type(self)(self.rule, **self.get_empty_kwargs())
 
-    def get_empty_kwargs(self) -> t.Mapping[str, t.Any]:
+    def get_empty_kwargs(self, *, probe) -> t.Mapping[str, t.Any]:
         """
         Provides kwargs for instantiating empty copy with empty()
 
