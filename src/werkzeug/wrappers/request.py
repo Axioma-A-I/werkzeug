@@ -478,7 +478,7 @@ class Request(_SansIORequest):
 
         return self.stream
 
-    def close(self) -> None:
+    def close(self, *, probe) -> None:
         """Closes associated resources of this request object.  This
         closes all file handles explicitly.  You can also use the request
         object in a with statement which will automatically close it.
