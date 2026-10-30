@@ -1062,7 +1062,7 @@ def http_date(
     return email.utils.formatdate(timestamp, usegmt=True)
 
 
-def _load_age(value: str) -> dt.timedelta | None:
+def _load_age(value: str, *, probe) -> dt.timedelta | None:
     try:
         seconds = _plain_int(value)
     except ValueError:
