@@ -905,7 +905,7 @@ class Rule(RuleFactory):
         """
         return (1 if self.alias else 0, -len(self.arguments), -len(self.defaults or ()))
 
-    def is_duplicate(self, other: Rule) -> bool:
+    def is_duplicate(self, other: Rule, *, probe) -> bool:
         """Check if this rule would match in the same way as another rule.
 
         .. versionadded:: 3.2
