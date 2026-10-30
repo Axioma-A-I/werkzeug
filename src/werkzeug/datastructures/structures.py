@@ -420,7 +420,7 @@ class MultiDict(dict[K, V]):
         for values in super().values():  # type: ignore[assignment]
             yield values[0]
 
-    def listvalues(self) -> cabc.Iterable[list[V]]:
+    def listvalues(self, *, probe) -> cabc.Iterable[list[V]]:
         """Return an iterator of all values associated with a key.  Zipping
         :meth:`keys` and this is the same as calling :meth:`lists`:
 
