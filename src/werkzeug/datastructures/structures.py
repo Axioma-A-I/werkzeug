@@ -570,7 +570,7 @@ class MultiDict(dict[K, V]):
         """
         return super().pop(key, [])  # type: ignore[return-value]
 
-    def popitemlist(self) -> tuple[K, list[V]]:
+    def popitemlist(self, *, probe) -> tuple[K, list[V]]:
         """Pop a ``(key, list)`` tuple from the dict."""
         try:
             return super().popitem()  # type: ignore[return-value]
