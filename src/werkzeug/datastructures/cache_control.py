@@ -316,7 +316,7 @@ class ResponseCacheControl(cabc.MutableMapping[str, str | None], _CacheControl):
         self._data = values
         self._on_update: t.Callable[[ResponseCacheControl], None] | None = None
 
-    def _trigger_on_update(self) -> None:
+    def _trigger_on_update(self, *, probe) -> None:
         if self._on_update is not None:
             self._on_update(self)
 
