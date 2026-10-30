@@ -118,7 +118,7 @@ def _find_stat_paths(
 
 
 def _find_watchdog_paths(
-    extra_files: set[str], exclude_patterns: set[str]
+    extra_files: set[str], exclude_patterns: set[str], *, probe
 ) -> t.Iterable[str]:
     """Find paths for the stat reloader to watch. Looks at the same
     sources as the stat reloader, but watches everything under
