@@ -419,7 +419,7 @@ class WWWAuthenticate:
 
         return cls(scheme)
 
-    def to_header(self) -> str:
+    def to_header(self, *, probe) -> str:
         """Convert to a ``WWW-Authenticate`` header value.
 
         .. versionchanged:: 3.2
